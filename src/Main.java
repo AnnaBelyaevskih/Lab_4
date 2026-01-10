@@ -27,10 +27,16 @@ public class Main {
                 }
 
                 case 2: {
-                    IntegerComparable item = new IntegerComparable(5);
-                    System.out.println("Сравниваем 5 с 3: " + item.compare(3));
-                    break;
+                    ComparableItem<Integer> item = new ComparableItem<>() {
+                        @Override
+                        public int compare(Integer other) {
+                            return 5 - other;
                 }
+            };
+
+            System.out.println("Сравниваем 5 с 3: " + item.compare(3));
+            break;
+        }
 
                 case 3: {
                     List<Box<? extends Number>> boxes = new ArrayList<>();
@@ -148,4 +154,5 @@ public class Main {
             }
         }
     }
+
 }

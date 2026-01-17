@@ -9,13 +9,13 @@ public class Main {
 
         while (true) {
             System.out.println("\nВыберите задание (0 - выход):");
-            System.out.println("1. task1.Box");
-            System.out.println("2. task1.ComparableItem");
-            System.out.println("3. task2.MaxFinder");
-            System.out.println("4. task3.FunctionApplier");
-            System.out.println("5. task3.Filter");
-            System.out.println("6. task3.Reducer");
-            System.out.println("7. task3.Collector");
+            System.out.println("1. Box");
+            System.out.println("2. ComparableItem");
+            System.out.println("3. MaxFinder");
+            System.out.println("4. FunctionApplier");
+            System.out.println("5. Filter");
+            System.out.println("6. Reducer");
+            System.out.println("7. Collector");
 
             int choice = scanner.nextInt();
             switch (choice) {
@@ -271,3 +271,4 @@ public class Main {
         }
     }
 }
+

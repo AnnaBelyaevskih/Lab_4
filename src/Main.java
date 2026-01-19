@@ -1,3 +1,11 @@
+import task1.Box;
+import task1.ComparableItem;
+import task2.MaxFinder;
+import task3.Collector;
+import task3.Filter;
+import task3.FunctionApplier;
+import task3.Reducer;
+
 import java.util.*;
 import java.util.function.Function;
 
@@ -264,11 +272,10 @@ public class Main {
 
                     break;
                 }
-                
+
                 default:
                     System.out.println("Неверный выбор!");
             }
         }
     }
 }
-

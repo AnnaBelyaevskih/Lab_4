@@ -4,12 +4,15 @@ import java.util.function.Supplier;
 
 public class Collector {
 
-    public static <T, C extends Collection<T>> C collect(
-            List<T> list, Supplier<C> collectionSupplier, Function<T, T> mapper) {
+    public static <T, C extends Collection<T>> C collect(List<T> list, Supplier<C> collectionSupplier, Function<T, T> mapper) {
         C collection = collectionSupplier.get();
         for (T item : list) {
-            collection.add(mapper.apply(item));
+            T mapped = mapper.apply(item);
+            if (mapped != null) {
+                collection.add(mapped);
+            }
         }
         return collection;
     }
+
 }
